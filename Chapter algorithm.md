@@ -1,3 +1,5 @@
+# Data structure
+
 # Chapter algorithm
 ## 0/1 knapsack
 >n個東西有其個別價值跟重量，另有一個限重為m的袋子
@@ -69,15 +71,15 @@ ADT is implementation-independent
 
 # Chapter 2
 ## 稀疏矩陣(sparse matrix)
-### sparse matrix representation
+### Sparse matrix representation
 using 3-tuple (row, column, value)
-### transpose a sparse matrix
+### Transpose a sparse matrix
 1. 跑所有 column
 2. 對於每一個可能的 column 值，掃描所有 terms
 3. 找出含有相對應的 column 的 terms，依序放進另一個陣列
 
 Time complexity:O(term * column)
-### fast transpose a sparse matrix
+### Fast transpose a sparse matrix
 * (比上一個做法多宣告兩個陣列 rowsize 和 rowstart)
 1. 跑所有 terms
 2. 統計每個 term 是屬於哪個 column，並記錄在 rowsize 裡面
@@ -92,7 +94,7 @@ f(j) = largest k < j, such that p[0 : k]=p[j-k : j], if k>0 exists
 f(j) = -1, otherwise.
 
 # Chapter 3
-## infix to postfix converion
+## Infix to postfix converion
 1. Fully parenthesize expression
 2. All operators replace their corresponding right parentheses. (if to prefix, then turn into left parentheses)
 3. Delete all parentheses. 
